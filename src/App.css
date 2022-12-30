@@ -1,38 +1,255 @@
-.App {
-  text-align: center;
+a { 
+  text-decoration: none;
+}
+html{
+	scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3, h4, h5, h6, p, span {
+  word-break: keep-all;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.NVRHeader{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 30px;
+}
+.NVRHeader img{
+  width: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+.button-nvr {
+	pointer-events: auto;
+	cursor: pointer;
+	background: #e7e7e7;
+	border: none;
+	padding: 1rem 3rem;
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	position: relative;
+	display: inline-block;
+  margin-top: 20px;
+}
+.button-nvr::before,
+.button-nvr::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.button-join {
+	text-transform: uppercase;
+	letter-spacing: 0.05rem;
+	font-weight: 700;
+	font-size: 0.85rem;
+	border-radius: 2rem;
+	overflow: hidden;
+	color: #fff;
+	background: #e7e7e7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.button-join span {
+	position: relative;
+	mix-blend-mode: difference;
+}
+
+.button-join::before {
+	content: '';
+	background: #000;
+	width: 120%;
+	left: -10%;
+	transform: skew(30deg);
+	transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.button-join:hover::before {
+	transform: translate3d(100%,0,0);
+}
+.Info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse; 
+}
+
+.Font-up{
+  font-size: 50px;
+  font-weight: bold;
+}
+.Info-reverse{
+  flex-direction: column
+}
+.Info-contents{
+  width: 90vw;
+  font-weight:600;
+  margin-bottom: 0px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.mt-30{
+  margin-top: 30;
+}
+.Info h1{
+  font-size: 32px;
+}
+
+.Img-box img{
+  width: 100%;
+  height: auto;
+}
+
+
+.Info h2{
+  font-size: 28px;
+  margin-top: 0px;
+}
+.Sub-title{
+  color: #237BFF;
+  margin-bottom: 5px;
+}
+.Arrow{
+  width: 12px;
+}
+.Arrow-rotate{
+  width: 12px;
+  transform: rotate(220deg);
+}
+.Arrow-rotate-up{
+  width: 12px;
+  transform: rotate(180deg);
+}
+/* .Info-contents a{
+  color: #2F37FF;
+  text-decoration: none;
+} */
+.Nvr-footer-container{
+  background-color: rgb(255, 255, 255);
+}
+.Enterprise{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Hourglass{
+  width: 200px;
+  height: auto;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+}
+.MainContainer-nvr hr{
+  width: 80%;
+  margin-bottom: 100px;
+}
+.RecycleCardContainer{
+  display: flex;
+  flex-direction: row;
+}
+.RecycleCardItem{
+  margin-right: 10px;
+}
+.Info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Img-box-sns{
+  width: 160px;
+  height: auto;
+}
+.Img-box-main{
+  width: 280px;
+  height: auto;
+}
+/* .Img-box-Main-img{
+  width: 100vw;
+  height: auto;
+} */
+.Info-contents h2{
+  font-size: 25px;
+}
+.Font-up{
+  font-size: 55px;
+}
+.Img-none{
+  display: none;
+}
+.ImageEffect{
+  transition: all 0.2s linear;
+  overflow: hidden;
+}
+.ImageEffect:hover{
+  transform: scale(1.02);
+}
+.motionvideo{
+  width: 80%;
+}
+
+
+@media (min-width: 750px){
+  .Main{
+    background-color: #EEEEEE;
   }
-  to {
-    transform: rotate(360deg);
+  .NVRHeader{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
   }
+  .NVRHeader img{
+    width: 50px;
+  }
+  .Info{
+    flex-direction: row;
+
+  }
+  .Info-contents{
+    width: 500px;
+    
+  }
+  .Info-contents h1{
+    font-size: 40px;
+  }
+  .Info-contents h2{
+    font-size: 30px;
+  }
+  .Img-box img{
+    width: 100%;
+    height: auto;
+  }
+  .Img-box{
+    width: 400px;
+    margin: 50px;
+  }
+  .Img-box-main{
+    width: 320px;
+    height: auto;
+  }
+  .Img-box-sns{
+    width: 200px;
+    height: auto;
+  }
+  .Img-box-mainIphone{
+    width: 300px;
+    height: auto;
+  }
+  .Img-box-Main-img{
+    width: 600px;
+    height: auto;
+    margin-left: 40px;
+    
+  }
+  .Nvr-footer-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .Font-up{
+    font-size: 40px;
+  }
+  .Img-none{
+    display: block;
+  }
+  
 }
